@@ -1,0 +1,14 @@
+<section>
+    <div class="main">
+        <div class="card-section">
+            <app-my-card></app-my-card>
+        </div>
+
+        <div class="right-section" *ngIf="serviceData.responseData">
+
+            <app-total-balance></app-total-balance>
+            <app-money-statistics></app-money-statistics>
+            <app-transaction-history></app-transaction-history>
+        </div>
+    </div>
+</section>

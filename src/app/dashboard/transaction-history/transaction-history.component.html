@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Transaction History</h4>
+        <div class="right-section">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="updateFilteredData()" placeholder="Search">
+            </div>
+            <button>
+                <i class="fas fa-sort-amount-down"></i> Filter
+            </button>
+            <button>
+                <i class="fas fa-file-download"></i> Export
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th *ngFor="let item of tableHeadings">
+                        <span>{{item}}</span> <span class="icons"><i  *ngIf="item!='Action'" class="fas fa-chevron-up"></i>
+                            <i  *ngIf="item!='Action'" class="fas fa-chevron-down"></i></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of filteredData">
+                    <td><span class="text-bold">{{data.date}}</span></td>
+                    <td><span class="text-bold">
+                            <div class="initial">
+                                <span>{{data.name | initials}}</span>
+                            </div>{{data.name}}
+                        </span></td>
+                    <td><span
+                            [ngClass]="data.status === 'Success' ? 'success' : data.status === 'Pending' ? 'pending' : 'failed'">{{data.status}}</span>
+                    </td>
+                    <td class="text-color">{{data.type}}</td>
+                    <td class="text-color">{{data.time}}</td>
+                    <td><span class="amount">${{data.amount}}</span></td>
+                    <td class="text-center">
+                        <a href="javascript:void(0)" (click)="modal(data)">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="popup" *ngIf="popup">
+    <div class="popup-inner">
+        <a href="javascript:void(0)" (click)="modal()">
+            <i class="fas fa-times"></i>
+        </a>
+        <h3>Name : {{modelData.name}}</h3>
+        <h4>Type : {{modelData.type}}</h4>
+    </div>
+</div>

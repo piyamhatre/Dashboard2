@@ -1,0 +1,252 @@
+.card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+
+    .card-header {
+        display: flex;
+        padding-bottom: 20px;
+
+        h4 {
+            display: inline-block;
+            width: 35%;
+            margin: 0;
+        }
+
+        .right-section {
+            display: flex;
+            margin-left: auto;
+
+            .search-box {
+                border: 1px solid var(--border-color);
+                border-radius: 10px;
+                padding: 1px 5px;
+
+
+                .fas {
+                    margin: 7px;
+
+                }
+
+                input {
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                background-color: var(--white);
+                border: 1px solid var(--border-color);
+                margin-left: 10px;
+                border-radius: 10px;
+                padding: 5px 20px;
+                height: 35px;
+            }
+
+            .fas {
+                color: var(--text-color);
+            }
+        }
+    }
+
+    .card-body {
+        table {
+            border-collapse: collapse;
+            text-align: left;
+
+            thead {
+                position: sticky;
+                top: 0;
+
+                tr {
+                    background-color: var(--primary-bg);
+                    color: var(--text-color);
+
+                    th {
+                        padding: 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            tbody {
+
+                .initial {
+                    background-color: #9d9d9d;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    span {
+                        font-size: 8px;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                    }
+                }
+
+                // th {
+
+                // .fa-chevron-down,
+                // .fa-chevron-up {
+                //     position: absolute;
+                //     right: 5%;
+                //     font-size: 11px;
+                // }
+
+
+
+
+                // .fa-chevron-up {
+                //     top:1px
+                // }
+
+                // .fa-chevron-down {
+                //     bottom: 54%
+                // }
+                // }
+
+                tr {
+                    td {
+                        padding: 10px;
+                        font-size: 12px;
+
+                        .text-bold {
+                            font-weight: 600 !important;
+                        }
+
+                        .text-color {
+                            color: var(--text-color);
+                        }
+
+                        .success {
+                            color: #5fa78c;
+                            background-color: #99e6c973;
+                            padding: 4px 8px;
+                            width: 60px;
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 6px;
+                        }
+
+                        .failed {
+                            color: #dc3545;
+                            background-color: #ffa6ae82;
+                            padding: 4px 8px;
+                            width: 60px;
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 6px;
+                        }
+
+                        .pending {
+                            color: #ffbf00;
+                            background-color: #ffde7952;
+                            padding: 4px 8px;
+                            width: 60px;
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 6px;
+                        }
+
+                        .amount {
+                            font-weight: 600;
+                        }
+
+                        .fas {
+                            color: var(--heading);
+                        }
+                    }
+
+                    .text-center {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.card-body th .icons {
+    position: relative;
+
+    .fa-chevron-up {
+        position: absolute;
+        top: 1px;
+        right: -13px;
+        font-size: 8px;
+    }
+
+    .fa-chevron-down {
+        position: absolute;
+        bottom: 3px;
+        right: -13px;
+        font-size: 8px;
+    }
+}
+
+.success {
+    color: #6aab93;
+    background-color: #f2fcf9;
+}
+
+
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    .popup-inner {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 10px;
+        margin-left: 33%;
+        margin-top: 15%;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+
+        a {
+            position: absolute;
+            right: -2%;
+            top: -12%;
+            border-radius: 50%;
+            background-color: var(--heading);
+            color: var(--white);
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        h4,
+        h2 {
+            margin: 0;
+        }
+    }
+
+    // tr{
+    //     td{
+
+    //     }
+    // }
+}

@@ -1,0 +1,15 @@
+.dashboard{
+    background-color: var(--primary-bg);
+    .d-flex{
+        display: flex;
+        .sidebar{
+            width: 20%;
+            height: 100vh;
+            position: sticky;
+            top: 0%;
+        }
+        .main{
+            width: 79%;
+        }
+    }
+}

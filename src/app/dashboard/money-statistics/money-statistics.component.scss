@@ -1,0 +1,77 @@
+.money {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    h4{
+        margin: 0;
+        margin-bottom: 35px;
+        
+        span{
+            float: right;
+            align-items: center;
+          }
+        .form-select{
+            // float: right;
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            margin-right: 15px;
+        }
+
+        .fas{
+            color: var(--text-color);
+        }
+
+    }
+
+    .row{
+        display: flex;
+        .income,
+        .expense,
+        .investment{
+            width: 33.33%;
+
+            h6{
+                color: var(--text-color);
+            }
+            h6,
+            h2{
+                margin: 0;
+               
+            }
+            small{
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .income{
+            small{
+                i,b{
+                    color: #198754;
+                }
+            }
+        }
+
+        .expense{
+            small{
+                i,b{
+                    color: #dc3545;
+                }
+            }
+        }
+
+        .investment{
+            small{
+                i,b{
+                    color: #ffc107;
+                }
+            }
+        }
+    }
+}
+
+.charts{
+    margin: 30px 0px 10px;
+}

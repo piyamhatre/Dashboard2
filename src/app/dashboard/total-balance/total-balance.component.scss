@@ -1,0 +1,38 @@
+.balance {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 10px;
+
+  h4{
+    margin: 0;
+
+    span{
+      float: right;
+      color: var(--text-color);
+    }
+  }
+  h2{
+    margin: 10px 0;
+    font-size: 30px;
+
+  }
+
+  p {
+    margin: 10px 0px 0px;
+    font-size: 12px;
+    color: var(--text-color);
+    span {
+      float: right;
+    }
+  }
+
+
+}
+
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+}

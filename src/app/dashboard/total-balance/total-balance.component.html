@@ -1,0 +1,8 @@
+<section class="balance">
+    <h4>Total Balance <span> <i class="fas fa-ellipsis-h"></i></span> </h4>
+    <h2>${{total_balance}}</h2>
+    <div class="progress">
+        <div class="progress-value" [ngStyle]="{'width.%': payment_done_percentage}"></div>
+    </div>
+    <p>Monthly Payment Limit <span><b>${{payment_done_so_far}}</b>/${{monthly_payment_limit}}</span></p>
+</section>
